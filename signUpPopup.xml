@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Created by ApplusForm.com on 2013.8.6
+
+	Permission is granted to copy, distribute, modify under the terms of ApplusForm License.
+
+	Copyright (C) 2013 ApplusForm.com All rights reserved.
+-->
+<MOML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.applusform.com/xsd/moml_ui.xsd" version="1.1.1">
+	<FUNCTION id="aniTo">
+		<CMD cmd="animation.flyIn('boxWindow', 0, -400, boxWindow.width, boxWindow.height, 'elasticOut3', 700, '')" />
+	</FUNCTION>
+
+	<CMD cmd="function.aniTo" />
+	<UILAYOUT portrait="720,1230" landscape="720,1230">
+		<POPUP layout="0,0,720,1230" defaultImg="#73180c" onClick="action:close()" align="relative">
+			<BUTTON layout="630,30,60,60" defaultImg="res/icon_tabs_decline_x.png" onClick="container.close()" />
+			<STYLEBUTTON id="boxWindow" layout="35,342,647,446" shape="roundRect(20)" defaultImg="#ffffff" align="relative" visible="invisible">
+				<STYLEBUTTON layout="20,20,607,89" shape="roundRect(20)" defaultImg="#f2f2f2" align="relative">
+					<EDIT layout="10,0,580,89" text="" placeholder="Email" placeholderColor="#b3b3b3" returnKeyType="next" onChange="" onReturnKey="" fontSize="30" textColor="#000000" 
+						textAlign="vCenter" defaultImg="#00000000" language="english" />
+				</STYLEBUTTON>
+				<STYLEBUTTON layout="20,128,607,89" shape="roundRect(20)" defaultImg="#f2f2f2" align="relative">
+					<EDIT layout="10,0,580,89" text="" placeholder="Password" textFormat="textPassword" placeholderColor="#b3b3b3" returnKeyType="next" onChange="" onReturnKey="" fontFace="res/Roboto-Light.ttf"
+						fontSize="30" textColor="#000000"  textAlign="vCenter" defaultImg="#00000000" language="english" />
+				</STYLEBUTTON>
+				<STYLEBUTTON layout="20,236,607,89" shape="roundRect(20)" defaultImg="#f2f2f2" align="relative">
+					<EDIT layout="10,0,580,89" text="" placeholder="Phone Number" placeholderColor="#b3b3b3" returnKeyType="done" onChange="" onReturnKey="" fontFace="res/Roboto-Light.ttf" fontSize="30"
+						textColor="#000000"  textAlign="vCenter" defaultImg="#00000000" language="english" />
+				</STYLEBUTTON>
+				<LABEL layout="0,344,720,2" defaultImg="#b3b3b3" />
+				<BUTTON layout="7,348,633,87" text="Verify Me" fontSize="30" textAlign="center" textColor="#e62f17" defaultImg="#00000000" onClick="device.toastPopup('Verify Me')" />
+			</STYLEBUTTON>
+		</POPUP>
+	</UILAYOUT>
+</MOML>
